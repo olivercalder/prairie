@@ -1,6 +1,6 @@
 #   File: prairie.py
 #   Created by: Oliver Calder and Simon Parker
-#   Revised 29 October 2018
+#   Revised 2 February 2019
 
 from graphics import *
 from random import *
@@ -8,6 +8,7 @@ from cloud import *
 from mountain import *
 from bison import *
 import operator
+import sys
 
 class Prairie:
     def __init__(self, window, height):
@@ -25,7 +26,13 @@ class Prairie:
 
 
 def main():
-    window = GraphWin('Prairie', 1280, 720, autoflush=False)
+    if len(sys.argv) == 3:
+        width = sys.argv[1]
+        height = sys.argv[2]
+    else:
+        width = 1280
+        height = 720
+    window = GraphWin('Prairie', width, height, autoflush=False)
     window.setBackground(color_rgb(155,200,250))
     mountains = []
     for i in range(40):
