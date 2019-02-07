@@ -1,7 +1,7 @@
 # prairie
 A graphical simulation of herds of bison roaming a prairie, implemented in Python.
 
-To run, download the zip and then run `python3 prairie.py`.
+To run, download the zip and then run `python3 prairie.py [width-pixels] [height-pixels]`.
 
 This program requires tkinter to be installed in order to run.
 To install tkinter, run one of the following based on your OS. 
